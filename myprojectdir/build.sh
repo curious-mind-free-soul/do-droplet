@@ -16,4 +16,4 @@ python manage.py migrate
 
 DJANGO_SUPERUSER_PASSWORD=password python manage.py createsuperuser --username=admin --email=admin@digitalocean.com --noinput
 
-python manage.py runserver
+# python manage.py runserver

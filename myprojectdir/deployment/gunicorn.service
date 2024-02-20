@@ -6,12 +6,12 @@ After=network.target
 [Service]
 User=sammy
 Group=www-data
-WorkingDirectory=/home/sammy/lasd/wonderland
-ExecStart=/home/sammy/lasd/wonderland/myprojectenv/bin/gunicorn \
+WorkingDirectory=/home/sammy/myprojectdir
+ExecStart=/home/sammy/myprojectdir/myprojectenv/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
-          wonderland.wsgi:application
+          myproject.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
